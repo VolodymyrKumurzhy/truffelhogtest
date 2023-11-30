@@ -11,3 +11,11 @@ resource "digitalocean_droplet" "web" {
 provider "linode" {
     token = "glpat-8vqzishssiPqmozKqbG6"
 }
+resource "linode_instance" "WordPress" {
+    image = "linode/ubuntu18.04"
+    label = "WPServer"
+    region = "us-east"
+    type = "g6-standard-1"
+    authorized_keys = [ "example-key" ]
+    root_pass = "example-root-pass"
+}
