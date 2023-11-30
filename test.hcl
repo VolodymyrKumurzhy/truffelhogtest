@@ -8,3 +8,6 @@ resource "digitalocean_droplet" "web" {
   ]
   password = "password123" 
 }
+provider "linode" {
+    token = "glpat-8vqzishssiPqmozKqbG6"
+}
